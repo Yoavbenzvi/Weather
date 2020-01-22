@@ -20,9 +20,14 @@ import './TopPart.css'
 			const time = now.getHours() + ":" + now.getMinutes()
 			return time;
 		}
+		getTime2 = () => {
+			const d = new Date();
+			const h = d.getHours().length === 1 ? "0" + d.getHours() : d.getHours();
+			const m = d.getMinutes().length === 1 ? "0" + d.getMinutes() : d.getMinutes();
+			const time = h + ":" + m;
+			return time;
+		}
 
-
-//asdasdasdasdasdasdasdasd
 		render() {
 			return(
 				<div className="container">
@@ -33,7 +38,7 @@ import './TopPart.css'
 						<p>{this.getDate()}</p>
 					</div>
 					<div className="time">
-						<p> {this.getTime()}</p>
+						<p> {this.getTime2()}</p>
 					</div>
 				</div>
 			)
