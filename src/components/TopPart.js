@@ -11,15 +11,13 @@ import './TopPart.css'
 		}
 
 		componentDidMount() {
-			this.timerID = setInterval(
-				() => this.tick(), 30000
-			);
-		}
-
-		tick = () => {
-			this.setState({
-				time: this.getTime()
-			})
+			this.timer = setInterval(
+				() => {
+					this.setState({
+						time: this.getTime()
+					})
+				}, 1000
+			)
 		}
 
 		getLocation = () => {
@@ -41,7 +39,7 @@ import './TopPart.css'
 			const d = new Date();
 			const h = d.getHours().toString().length === 1 ? "0" + d.getHours() : d.getHours();
 			const m = d.getMinutes().toString().length === 1 ? "0" + d.getMinutes() : d.getMinutes();
-			const time = h + ":" + m;
+			const time = h + ":" + m + ":" + d.getSeconds();
 			return time;
 		}
 
