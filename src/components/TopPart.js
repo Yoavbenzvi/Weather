@@ -16,7 +16,7 @@ import './TopPart.css'
 					this.setState({
 						time: this.getTime()
 					})
-				}, 1000
+				}, 30000
 			)
 		}
 
@@ -39,7 +39,7 @@ import './TopPart.css'
 			const d = new Date();
 			const h = d.getHours().toString().length === 1 ? "0" + d.getHours() : d.getHours();
 			const m = d.getMinutes().toString().length === 1 ? "0" + d.getMinutes() : d.getMinutes();
-			const time = h + ":" + m + ":" + d.getSeconds();
+			const time = h + ":" + m;
 			return time;
 		}
 

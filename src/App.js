@@ -7,6 +7,10 @@ import DayCard from './components/DayCard';
 
 class App extends React.Component {
 
+	renderDays = () => {
+
+	}
+
 	render() {
 		return(
 			<div className="container">
