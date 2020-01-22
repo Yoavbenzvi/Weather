@@ -2,6 +2,25 @@ import React from 'react';
 import './TopPart.css'
 
 	class TopPart extends React.Component {
+		constructor() {
+			super()
+
+			this.state = {
+				time: this.getTime()
+			}
+		}
+
+		componentDidMount() {
+			this.timerID = setInterval(
+				() => this.tick(), 30000
+			);
+		}
+
+		tick = () => {
+			this.setState({
+				time: this.getTime()
+			})
+		}
 
 		getLocation = () => {
 			const cutPoint = Intl.DateTimeFormat().resolvedOptions().timeZone.indexOf("/");
@@ -36,7 +55,7 @@ import './TopPart.css'
 						<p>{this.getDate()}</p>
 					</div>
 					<div className="time">
-						<p> {this.getTime()}</p>
+						<p> {this.state.time}</p>
 					</div>
 				</div>
 			)
