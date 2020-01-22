@@ -14,7 +14,7 @@ class DayCard extends React.Component {
 			<div className="card">
 				<h4>{this.props.day}</h4>
 				<i className={this.randomIcon()}></i>
-				<p><span className="max">{this.props.max}</span> / <span className="min">{this.props.min}</span></p>
+				<p><span className="max">{this.props.max}°</span> / <span className="min">{this.props.min}°</span></p>
 			</div>
 		)
 	}
