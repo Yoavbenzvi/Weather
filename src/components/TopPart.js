@@ -45,7 +45,7 @@ import './TopPart.css'
 
 		render() {
 			return(
-				<div className="container">
+				<div className="box">
 					<div className="location">
 						<p>{this.getLocation()}</p>
 					</div>

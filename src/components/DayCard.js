@@ -1,36 +1,20 @@
 import React from 'react';
+import './DayCard.css';
 
 class DayCard extends React.Component {
 
-	// setDay = (id) => {
-	// 	if(id === 0) {
-	// 		let day = "Sun";
-	// 		return day;
-	// 	} else if(id === 1) {
-	// 		let day = "Mon";
-	// 		return day;
-	// 	} else if(id === 2) {
-	// 		let day = "Tue";
-	// 		return day;
-	// 	} else if(id === 3) {
-	// 		let day = "Wed";
-	// 		return day;
-	// 	} else if(id === 4) {
-	// 		let day = "Thu";
-	// 		return day;
-	// 	} else if(id === 5) {
-	// 		let day = "Fri";
-	// 		return day;
-	// 	} else if(id === 6) {
-	// 		let day = "Sat";
-	// 		return day;
-	// 	}
-	// }
+	randomIcon = () => {
+		const icons = ["fas fa-cloud", "fas fa-cloud-showers-heavy", "fas fa-cloud-sun", "fas fa-sun", "fas fa-snowflake"]
+		const number = Math.floor(Math.random() * 5);
+		return icons[number];
+	}
 
 	render() {
 		return(
-			<div>
-				<h4>{}</h4>
+			<div className="card">
+				<h4>{this.props.day}</h4>
+				<i className={this.randomIcon()}></i>
+				<p><span className="max">{this.props.max}</span> / <span className="min">{this.props.min}</span></p>
 			</div>
 		)
 	}
