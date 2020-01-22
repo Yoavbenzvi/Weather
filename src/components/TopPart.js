@@ -11,19 +11,17 @@ import './TopPart.css'
 
 		getDate = () => { 
 			const today = new Date();
-			const date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+			const day = today.getDate().toString().length === 1 ? "0" + today.getDate() : today.getDate();
+			const tempMonth = today.getMonth()+1;
+			const month = tempMonth.toString().length === 1 ? "0" + tempMonth : tempMonth; 
+			const date = day+'/'+month+'/'+today.getFullYear();
 			return date;
 		}
 
 		getTime = () => {
-			const now = new Date();
-			const time = now.getHours() + ":" + now.getMinutes()
-			return time;
-		}
-		getTime2 = () => {
 			const d = new Date();
-			const h = d.getHours().length === 1 ? "0" + d.getHours() : d.getHours();
-			const m = d.getMinutes().length === 1 ? "0" + d.getMinutes() : d.getMinutes();
+			const h = d.getHours().toString().length === 1 ? "0" + d.getHours() : d.getHours();
+			const m = d.getMinutes().toString().length === 1 ? "0" + d.getMinutes() : d.getMinutes();
 			const time = h + ":" + m;
 			return time;
 		}
@@ -38,7 +36,7 @@ import './TopPart.css'
 						<p>{this.getDate()}</p>
 					</div>
 					<div className="time">
-						<p> {this.getTime2()}</p>
+						<p> {this.getTime()}</p>
 					</div>
 				</div>
 			)
