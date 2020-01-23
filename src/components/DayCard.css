@@ -9,7 +9,8 @@
 
 .min {
 	color: lightgrey;
-	font-style: italic;
+
+	font-size: 0.8em
 }
 
 .card:hover {
