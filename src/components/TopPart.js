@@ -40,14 +40,16 @@ import './TopPart.css'
 		}
 
 		changeCity = (e) => {
+			const cityName = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
 			this.setState({
-				city: e.target.value
+				city: cityName
 			})
 		}
 
 		changeCountry = (e) => {
+			const countryName = e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
 			this.setState({
-				country: e.target.value
+				country: countryName
 			})
 		}
 
@@ -60,17 +62,13 @@ import './TopPart.css'
 		render() {
 			return(
 				<div className="box">
-					<div className="date">
+					<div className="clock">
 						<p>{this.getDate()}</p>
+						<p>{this.state.time}</p>
 					</div>
-					<div className="time">
-						<p> {this.state.time}</p>
-					</div>
-					<div>
-						<label>City:</label>
-							<input value={this.state.city} onChange={(e) => this.changeCity(e)} ></input>
-						<label>Country:</label>
-							<input value={this.state.country} onChange={(e) => this.changeCountry(e)} ></input>
+					<div className="input">
+						<input placeholder="city" value={this.state.city} onChange={(e) => this.changeCity(e)} ></input>
+						<input placeholder="country" value={this.state.country} onChange={(e) => this.changeCountry(e)} ></input>
 						<button onClick={() => this.handleClick(this.state.city, this.state.country)} >Get Forecast</button>
 					</div>
 				</div>

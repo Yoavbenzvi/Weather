@@ -1,14 +1,40 @@
-.box {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-size: 1.5em;
-	line-height: 15px;
-	font-weight: bold;
-}
-
 input {
 	background: transparent;
 	border: none;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #C23F00;
+	margin: 4px;
+	color: white;
+	font-size: 2rem;
+	width: 200px;
 }
+
+button {
+	color: white;
+	background-color: #C23F00;
+	border-radius: 5px;
+	border: none;
+	padding: 8px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+/*	align-items: center;*/
+	font-size: 1.5em;
+	line-height: 5px;
+	font-weight: bold;
+}
+
+.clock {
+	align-self: flex-end;
+	display: flex;
+	flex-direction: column;
+}
+
+.input {
+	align-self: center;
+}
+
+/*orange: C23F00*/

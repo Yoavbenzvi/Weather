@@ -1,9 +1,20 @@
 body {
-	height: 80vh;
-	background-color: #569ED6;
-	font-family: Arial, Helvetica, sans-serif;
+	background: linear-gradient(to right, rgb(243, 170, 54), rgb(239, 113, 0));
+	font-family:'Open Sans', sans-serif;
 	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.container {
+	height: 80vh;
+	background-color: #2c3e50;
+	border-radius: 5px;
+	padding: 2em;
+	margin-top: 2em;
+	margin-right: 2.5em;
+	margin-left: 2.5em;
+	-webkit-box-shadow: 4px 10px 27px 2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 4px 10px 27px 2px rgba(0,0,0,0.75);
+	box-shadow: 4px 10px 27px 2px rgba(0,0,0,0.75);
 }
 
 .days {
@@ -15,9 +26,4 @@ body {
 	margin-left: 40px;
 	transition: 2s;
 }
-/*
-085591
-1173BE
-3488C9
-569ED6
-81B9E5*/
+/*orange: C23F00*/
