@@ -30,9 +30,19 @@ class DayCard extends React.Component {
 	render() {
 		return(
 			<div className="card">
-				<h4>{this.props.day}</h4>
+				<h4>
+					{this.props.day}
+				</h4>
 				<div className={this.getIcon(this.props.icon)}></div>
-				<p><span className="max">{this.props.max}°</span> / <span className="min">{this.props.min}°</span></p>
+				<p>
+					<span className="max">
+						{this.props.max}°
+					</span> 
+					/ 
+					<span className="min">
+						{this.props.min}°
+					</span>
+				</p>
 			</div>
 		)
 	}
