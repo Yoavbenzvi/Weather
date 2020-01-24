@@ -35,9 +35,15 @@ class App extends React.Component {
 
 	setDays = () => {
 		const newDays = [];
-		for(let i = 0; i < 10; i++) {
-			newDays.push([this.kaToCeHigh(this.state.weather.list[i].main.temp_max), this.kaToCeLow(this.state.weather.list[i].main.temp_min), this.state.weather.list[i].weather[0].description])
+		for(let i = 0; i < 8; i++) {
+			newDays.push([
+				this.kaToCeHigh(this.state.weather.list[i].main.temp_max), 
+				this.kaToCeLow(this.state.weather.list[i].main.temp_min), 
+				this.state.weather.list[i].weather[0].description,
+				this.state.weather.list[i].dt_txt
+			])
 		}
+		console.log(newDays)
 		this.setState({
 			days: newDays
 		})
@@ -47,7 +53,13 @@ class App extends React.Component {
 
 	renderDays = () => {
 		const renderedDays = this.state.days.map((item, i) => 
-			<DayCard key={i} max={this.state.days[i][0]} min={this.state.days[i][1]} icon={this.state.days[i][2]} />)
+			<DayCard 
+				key={i} 
+				max={this.state.days[i][0]} 
+				min={this.state.days[i][1]} 
+				icon={this.state.days[i][2]} 
+				time={this.state.days[i][3]} 
+			/>)
 		this.setState({
 			days: renderedDays
 		})

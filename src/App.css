@@ -24,5 +24,6 @@ body {
 	padding: 32px;
 	margin-right: 40px;
 	margin-left: 40px;
+	margin-top: 4em;
 	transition: 2s;
 }

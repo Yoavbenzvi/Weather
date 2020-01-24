@@ -19,11 +19,18 @@ class DayCard extends React.Component {
 		}
 	}
 
+	cutTime = (string) => {
+		return string.substring(11, 16);
+	}
+
 	render() {
 		return(
 			<div className="card">
 				<div className={this.getIcon(this.props.icon)}></div>
-				<p>
+				<div>
+					{this.cutTime(this.props.time)}
+				</div>
+				<div>
 					<span className="max">
 						{this.props.max}°
 					</span> 
@@ -31,7 +38,7 @@ class DayCard extends React.Component {
 					<span className="min">
 						{this.props.min}°
 					</span>
-				</p>
+				</div>
 			</div>
 		)
 	}
