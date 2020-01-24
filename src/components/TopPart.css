@@ -21,7 +21,6 @@ button {
 .box {
 	display: flex;
 	flex-direction: column;
-/*	align-items: center;*/
 	font-size: 1.5em;
 	line-height: 5px;
 	font-weight: bold;
@@ -36,5 +35,3 @@ button {
 .input {
 	align-self: center;
 }
-
-/*orange: C23F00*/

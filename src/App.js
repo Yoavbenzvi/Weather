@@ -24,7 +24,6 @@ class App extends React.Component {
 		return celsius;
 	}
 
-
 	getWeather = async (city, country) => {
 		await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}?id=524901&APPID=e8225be1aa07c8310717e23a670d52f2`)
 		.then(response => response.json())
@@ -36,7 +35,7 @@ class App extends React.Component {
 
 	setDays = () => {
 		const newDays = [];
-		for(let i = 0; i < 7; i++) {
+		for(let i = 0; i < 10; i++) {
 			newDays.push([this.kaToCeHigh(this.state.weather.list[i].main.temp_max), this.kaToCeLow(this.state.weather.list[i].main.temp_min), this.state.weather.list[i].weather[0].description])
 		}
 		this.setState({
@@ -67,9 +66,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-	// renderDays = () => {
-	// 	const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-	// 	const renderedDays = days.map((item, i) => <DayCard className="DayCard" day={dayNames[item.id]} key={i} max={item.max} min={item.min} />)
-	// 	return renderedDays;
-	// }

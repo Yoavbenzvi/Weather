@@ -14,11 +14,7 @@
 }
 
 .card:hover {
+	-webkit-box-shadow: 3px 2px 2px 3px #0C2032;
+	-moz-box-shadow: 3px 2px 2px 3px #0C2032;
 	box-shadow: 3px 2px 2px 3px #0C2032;
 }
-/*
-085591
-1173BE
-3488C9
-569ED6
-81B9E5*/
